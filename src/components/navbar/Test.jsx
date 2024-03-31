@@ -1,7 +1,9 @@
+import { motion } from "framer-motion"
+
 const Test = () => {
   return (
     <div className="course">
-        <div className="box"></div>
+        <motion.div className="box" animate={{opacity:0}}></motion.div>
     </div>
   )
 }
