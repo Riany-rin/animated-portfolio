@@ -5,7 +5,7 @@ const Test = () => {
   const [open, setOpen] = useState(false)
 
   const variants = {
-    visible: {opacity:1},
+    visible: {opacity:1, x:1000, transition:{duration:2}},
     hidden: {opacity:0}
   }
   return (
@@ -15,7 +15,6 @@ const Test = () => {
             variants={variants}
             // initial="hidden"
             // animate="visible"
-            transition={{duration:2}}
             animate={open ? "visible" : "hidden"}
         ></motion.div>
         <button onClick={() => setOpen(prev => !prev)}>Click</button>
