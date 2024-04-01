@@ -5,11 +5,11 @@ const Test = () => {
   const [open, setOpen] = useState(false)
 
   const variants = {
-    visible: {
+    visible: (i)=>({
       opacity:1, 
       x:100, 
-      transition:{staggerChildren: 0.2}
-    },
+      transition:{delay: i*0.3}
+    }),
     hidden: {opacity:0}
   }
 
@@ -18,8 +18,8 @@ const Test = () => {
   return (
     <div className="course">
         <motion.ul variants={variants} initial="hidden" animate="visible">
-          {items.map((item) => (
-            <motion.li variants={variants} key={item}>{item}</motion.li>
+          {items.map((item,i) => (
+            <motion.li variants={variants} key={item} custom={i}>{item}</motion.li>
           ))}
         </motion.ul>
     </div>
