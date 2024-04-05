@@ -5,9 +5,9 @@ const Services = () => {
   return (
     <div className="services">
       <div className="textContainer">
-        <p>I focus on helping your brand grow</p>
+        <p>I focus on helping your brand grow
         <br/>
-        and move forward
+        and move forward</p><hr/>
       </div>
       <div className="titleContainer">
         <div className="title">
@@ -18,13 +18,13 @@ const Services = () => {
         </div>
         <div className="title">
             <h1>
-                <b>For Your</b> Business,
+                <b>For Your</b> Business.
             </h1>
             <button>WHAT WE DO?</button>
         </div>
       </div>
       <div className="listContainer">
-        <div className="box">
+        <motion.div className="box" whileHover={{background: "lightgray", color: "black"}}>
             <h2>Branding</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum 
@@ -33,8 +33,8 @@ const Services = () => {
                 explicabo maiores?
             </p>
             <button>Go</button>
-        </div>
-        <div className="box">
+        </motion.div>
+        <motion.div className="box" whileHover={{background: "lightgray", color: "black"}}>
             <h2>Branding</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum 
@@ -43,8 +43,8 @@ const Services = () => {
                 explicabo maiores?
             </p>
             <button>Go</button>
-        </div>
-        <div className="box">
+        </motion.div>
+        <motion.div className="box" whileHover={{background: "lightgray", color: "black"}}>
             <h2>Branding</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum 
@@ -53,8 +53,8 @@ const Services = () => {
                 explicabo maiores?
             </p>
             <button>Go</button>
-        </div>
-        <div className="box">
+        </motion.div>
+        <motion.div className="box" whileHover={{background: "lightgray", color: "black"}}>
             <h2>Branding</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum 
@@ -63,7 +63,7 @@ const Services = () => {
                 explicabo maiores?
             </p>
             <button>Go</button>
-        </div>
+        </motion.div>
       </div>
     </div>
   )
