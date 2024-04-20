@@ -32,9 +32,17 @@ const items = [
 
 
 const Single = ({item}) =>{
+    const ref = useRef()
     return (
-        <section>
-            {item.title}
+        <section ref={ref}>
+            <div className="container">
+                <img src={item.img} alt="" />
+                <div className="textContainer">
+                    <h2>{item.title}</h2>
+                    <p>{item.desc}</p>
+                    <button>See Demo</button>
+                </div>
+            </div>
         </section>
     )
 }
