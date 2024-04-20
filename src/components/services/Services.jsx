@@ -1,15 +1,32 @@
 import "./services.scss"
-import { motion } from "framer-motion"
+import { animate, motion } from "framer-motion"
+
+const variants = {
+  initial:{
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate:{
+    x: 0,
+    opacity: 1,
+    y: 0,
+    transition:{
+      duration:1,
+      staggerChildren: 0.1
+    }
+  }
+}
 
 const Services = () => {
   return (
-    <div className="services">
-      <div className="textContainer">
+    <motion.div className="services" variants={variants} initial="initial" animate="animate">
+      <motion.div className="textContainer" variants={variants}>
         <p>I focus on helping your brand grow
         <br/>
         and move forward</p><hr/>
-      </div>
-      <div className="titleContainer">
+      </motion.div>
+      <motion.div className="titleContainer" variants={variants}>
         <div className="title">
             <img src="/people.webp" alt="people picture" />
             <h1>
@@ -22,8 +39,8 @@ const Services = () => {
             </h1>
             <button>WHAT WE DO?</button>
         </div>
-      </div>
-      <div className="listContainer">
+      </motion.div>
+      <motion.div className="listContainer" variants={variants}>
         <motion.div className="box" whileHover={{background: "lightgray", color: "black"}}>
             <h2>Branding</h2>
             <p>
@@ -64,8 +81,8 @@ const Services = () => {
             </p>
             <button>Go</button>
         </motion.div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 
