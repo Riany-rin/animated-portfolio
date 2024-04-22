@@ -20,7 +20,7 @@ const App = () => {
       <section><Services/></section>
       <section id="Portfolio"><Parallax type="porfolio"/></section>
       <Portfolio/>
-      {/* <section id="Contact"><Contact/></section> */}
+      <section id="Contact"><Contact/></section>
       {/* <Test/> */}
     </div>
   );
