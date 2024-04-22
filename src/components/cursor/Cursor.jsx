@@ -17,7 +17,7 @@ const Cursor = () => {
     }
   },[])
 
-  console.log(position)
+  // console.log(position)
 
   return (
     <motion.div className="cursor"
